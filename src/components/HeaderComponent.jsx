@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { userLogout } from "../features/authSlice";
 import Button from "./button/Button";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { ShoppingBagIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
+import {  ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 function NavbarComponent() {
   const dispatch = useDispatch();
@@ -55,13 +55,10 @@ function NavbarComponent() {
   }
 
   return (
-    <nav className="sticky top-0 z-10 bg-white flex items-center gap-x-12 px-5 py-5 border-b border-slate-200 md:px-10 xl:px-28">
+    <nav className="sticky top-0 z-10 bg-white flex items-center gap-x-12 px-5 py-5 border-b border-slate-200 md:px-10 xl:px-28 justify-between">
       <h1 className="text-3xl text-[#ffa500] font-medium">
         <Link to="/"
         className="flex items-center gap-2">
-          <ShoppingBagIcon
-            className="w-8 inline -mt-1" 
-          />
           <span>TokoKita</span>
         </Link>
       </h1>
